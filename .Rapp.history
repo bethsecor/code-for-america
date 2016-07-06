@@ -1,0 +1,149 @@
+violations.data <- read.csv("/Users/elizabethsecor/Documents/code-for-america/Violations-2012.csv", header=TRUE)
+head(violations.data)
+table(violations.data$violation_category)
+by(violations.data, violations.data$violation_category, table)
+by(violations.data$violation_date, violations.data$violation_category, min)
+by(violations.data$violation_date, violations.data$violation_category, summary)
+violations.data$violation_date <- as.Date(violations.data$violation_date)
+by(violations.data$violation_date, violations.data$violation_category, summary)
+by(violations.data$violation_date, violations.data$violation_category, min)
+by(violations.data$violation_date, violations.data$violation_category, as.Date(min))
+by(violations.data$violation_date, violations.data$violation_category, function(x){ as.Date(min(x))})
+by(violations.data$violation_date, violations.data$violation_category, function(x){ as.Date(min(x)) })
+by(violations.data$violation_date, violations.data$violation_category, function(x){ summary(x)[1] })
+by(violations.data$violation_date, violations.data$violation_category, function(x){ summary(x)[3] })
+results <- table(violations.data$violation_category)
+results
+results <- matrix(NULL, 9, 4)
+results <- matrix(NA, 9, 4)
+results
+catrgory.summary <- table(violations.data$violation_category)
+catergory.summary <- table(violations.data$violation_category)
+category.summary <- table(violations.data$violation_category)
+results[,1] <- names(category.summary)
+results
+results[,2] <- category.summary
+results
+results[,3] <- by(violations.data$violation_date, violations.data$violation_category, min)
+results
+results[,3] <- lapply(by(violations.data$violation_date, violations.data$violation_category, min),as.Date)
+results[,3] <- lapply(by(violations.data$violation_date, violations.data$violation_category, min),function(x){as.Date(x)})
+by(violations.data$violation_date, violations.data$violation_category, min)
+results[,3] <- lapply(by(violations.data$violation_date, violations.data$violation_category, min), function(x){as.Date(x, origin="1904-01-01")})
+results
+results[,3] <- lapply(by(violations.data$violation_date, violations.data$violation_category, min), function(x){as.Date(x, origin="1970-01-01")})
+results
+results <- matrix(NA, 9, 4)
+results[,1] <- names(category.summary)#
+results[,2] <- category.summary#
+#
+results[,3] <- lapply(by(violations.data$violation_date, violations.data$violation_category, min), function(x){as.Date(x, origin="1970-01-01")})
+results
+lapply(by(violations.data$violation_date, violations.data$violation_category, min), function(x){as.Date(x, origin="1970-01-01")})
+results[,3] <- sapply(by(violations.data$violation_date, violations.data$violation_category, min), function(x){as.Date(x, origin="1970-01-01")})
+sapply(by(violations.data$violation_date, violations.data$violation_category, min), function(x){as.Date(x, origin="1970-01-01")})
+sapply(by(violations.data$violation_date, violations.data$violation_category, min), function(x){as.Date(x, origin="1970-01-01")})
+results[,3] <- lapply(by(violations.data$violation_date, violations.data$violation_category, min), function(x){as.Date(x, origin="1970-01-01")})
+lapply(by(violations.data$violation_date, violations.data$violation_category, min), function(x){as.Date(x, origin="1970-01-01")})
+results <- matrix(NA, 9, 4)
+sapply(by(violations.data$violation_date, violations.data$violation_category, min), function(x){as.Date(x, origin="1970-01-01")})
+sapply(by(violations.data$violation_date, violations.data$violation_category, min), function(x){as.Date(x, origin="1970-01-01")})
+sapply(by(violations.data$violation_date, violations.data$violation_category, min), function(x){as.Date(x, origin="1970-01-01")})
+by(violations.data$violation_date, violations.data$violation_category, function(x){as.Date(min(x), origin="1970-01-01")})
+results <- matrix(NA, 9, 4)#
+#
+# number of violations per category:#
+category.summary <- table(violations.data$violation_category)#
+results[,1] <- names(category.summary)#
+results[,2] <- category.summary#
+#
+results[,3] <- as.Date(by(violations.data$violation_date, violations.data$violation_category, min), origin = "1970-01-01")
+by(violations.data$violation_date, violations.data$violation_category, min)
+results[,3] <- as.Date(results[,3], origin = "1970-01-01")
+results
+results[,3] <- by(violations.data$violation_date, violations.data$violation_category, min)
+results[,3] <- as.Date(results[,3], origin = "1970-01-01")
+results
+results[,3] <- by(violations.data$violation_date, violations.data$violation_category, max)
+results <- matrix(NA, 9, 4)#
+#
+# number of violations per category:#
+category.summary <- table(violations.data$violation_category)#
+results[,1] <- names(category.summary)#
+results[,2] <- category.summary#
+#
+results[,3] <- by(violations.data$violation_date, violations.data$violation_category, min)#
+results[,4] <- by(violations.data$violation_date, violations.data$violation_category, max)
+results
+as.Date(as.numeric(results[,3]), origin = "1970-01-01")
+results[,3] <- by(violations.data$violation_date, violations.data$violation_category, min)#
+results[,3] <- as.Date(as.numeric(results[,3]), origin = "1970-01-01")
+results
+results <- matrix(NA, 9, 4)#
+#
+# number of violations per category:#
+category.summary <- table(violations.data$violation_category)#
+results[,1] <- names(category.summary)#
+results[,2] <- category.summary#
+#
+results[,3] <- by(violations.data$violation_date, violations.data$violation_category, min)#
+results[,3] <- as.Date(as.numeric(results[,3]), origin = "1970-01-01")#
+results[,4] <- by(violations.data$violation_date, violations.data$violation_category, max)
+results
+minimums <- c(by(violations.data$violation_date, violations.data$violation_category, min))
+minimums
+as.Date(as.numeric(minimums), origin = "1970-01-01")
+results <- matrix(NA, 9, 4)#
+#
+# number of violations per category:#
+category.summary <- table(violations.data$violation_category)#
+results[,1] <- names(category.summary)#
+results[,2] <- category.summary#
+#
+minimums <- c(by(violations.data$violation_date, violations.data$violation_category, min))#
+results[,3] <- as.Date(as.numeric(minimums), origin = "1970-01-01")#
+#
+maximums <- by(violations.data$violation_date, violations.data$violation_category, max)#
+results[,4] <- as.Date(as.numeric(minimums), origin = "1970-01-01")
+results
+results <- matrix(NA, 9, 4)#
+#
+# number of violations per category:#
+category.summary <- table(violations.data$violation_category)#
+results[,1] <- names(category.summary)#
+results[,2] <- category.summary#
+#
+minimums <- c(by(violations.data$violation_date, violations.data$violation_category, min))#
+results[,3] <- as.character(as.Date(as.numeric(minimums), origin = "1970-01-01"))#
+#
+maximums <- by(violations.data$violation_date, violations.data$violation_category, max)#
+results[,4] <- as.character(as.Date(as.numeric(minimums), origin = "1970-01-01"))#
+results
+results <- matrix(NA, 9, 4)#
+colnames(results) <- c("Category", "Number of Violations", "Earliest Violation Date", "Latest Violation Date")#
+#
+# number of violations per category:#
+category.summary <- table(violations.data$violation_category)#
+results[,1] <- names(category.summary)#
+results[,2] <- category.summary#
+#
+minimums <- c(by(violations.data$violation_date, violations.data$violation_category, min))#
+results[,3] <- as.character(as.Date(as.numeric(minimums), origin = "1970-01-01"))#
+#
+maximums <- by(violations.data$violation_date, violations.data$violation_category, max)#
+results[,4] <- as.character(as.Date(as.numeric(minimums), origin = "1970-01-01"))#
+results
+results <- matrix(NA, 9, 4)#
+colnames(results) <- c("Category", "Number of Violations", "Earliest Violation Date", "Latest Violation Date")#
+#
+# number of violations per category:#
+category.summary <- table(violations.data$violation_category)#
+results[,1] <- names(category.summary)#
+results[,2] <- category.summary#
+#
+minimums <- c(by(violations.data$violation_date, violations.data$violation_category, min))#
+results[,3] <- as.character(as.Date(as.numeric(minimums), origin = "1970-01-01"))#
+#
+maximums <- by(violations.data$violation_date, violations.data$violation_category, max)#
+results[,4] <- as.character(as.Date(as.numeric(maximums), origin = "1970-01-01"))#
+results
